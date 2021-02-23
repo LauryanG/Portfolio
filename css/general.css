@@ -1,0 +1,25 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  background-color: #FAFAFA;
+}
+
+body h1, body h2, body h3 {
+  font-family: "Spectral", serif;
+  background: -webkit-linear-gradient(#F3CFE9, #8B47B5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  font-family: "Spectral", serif;
+  background: -webkit-linear-gradient(#00FFFF, #1813A2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*# sourceMappingURL=general.css.map */

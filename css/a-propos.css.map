@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../scss/a-propos.scss"
-    ],
-    "names": [],
-    "file": "a-propos.css"
-}
