@@ -12,6 +12,10 @@ body h1, body h2, body h3 {
   -webkit-text-fill-color: transparent;
 }
 
+body a {
+  text-decoration: none;
+}
+
 body.dark {
   background-color: black;
   color: white;

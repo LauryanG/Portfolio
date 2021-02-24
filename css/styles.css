@@ -12,6 +12,10 @@ body h1, body h2, body h3 {
   -webkit-text-fill-color: transparent;
 }
 
+body a {
+  text-decoration: none;
+}
+
 body.dark {
   background-color: black;
   color: white;
@@ -91,5 +95,39 @@ body nav a hr:not([size]) {
 
 body nav a:hover hr:not([size]) {
   width: auto;
+}
+
+.contact {
+  width: 50vw;
+}
+
+.contact .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .information .tel, .contact .information .email {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .liens {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .liens a {
+  display: flex;
+}
+
+.contact .liens .social {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .liens .social li {
+  list-style: none;
+  padding: 0.2em;
 }
 /*# sourceMappingURL=styles.css.map */

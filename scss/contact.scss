@@ -1,0 +1,32 @@
+.contact {
+    width: 50vw;
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tel, .email {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .liens {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            display: flex;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                list-style: none;
+                padding: 0.2em;
+            }
+        }
+    }
+}
