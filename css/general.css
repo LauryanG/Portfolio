@@ -2,6 +2,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: black;
   background-color: #FAFAFA;
+  height: 100vh;
 }
 
 body h1, body h2, body h3 {
@@ -21,5 +22,9 @@ body.dark h1, body.dark h2, body.dark h3 {
   background: -webkit-linear-gradient(#00FFFF, #1813A2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+body.dark a {
+  color: white;
 }
 /*# sourceMappingURL=general.css.map */

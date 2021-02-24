@@ -1,19 +1,10 @@
-$font-title: 'Spectral', serif;
-$font-text: 'Montserrat', sans-serif;
-
-$darkAqua : #00FFFF;
-$darkBlue : #1813A2;
-
-$lightPink : #F3CFE9;
-$lightPurple :#8B47B5;
-
-$lightBackground :#FAFAFA;
-
+@import "variables.scss";
 
 body {
     font-family: $font-text;
     color: black;
     background-color: $lightBackground;
+    height: 100vh;
 
     h1, h2, h3 {
         font-family: $font-title;
@@ -33,6 +24,9 @@ body.dark {
         background: -webkit-linear-gradient($darkAqua, $darkBlue);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
 
+    a {
+        color: white;
     }
 }
