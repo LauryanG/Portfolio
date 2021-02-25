@@ -5,6 +5,7 @@ body {
     color: black;
     background-color: $lightBackground;
     height: 100vh;
+    width: 100vw;
 
     h1, h2, h3 {
         font-family: $font-title;
@@ -16,6 +17,19 @@ body {
 
     a {
         text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .container {
+        height: 100vh !important;
+        min-width: 100vw !important;
+    }
+
+    footer {
+        font-size: 0.8em;
     }
 }
 

@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="media/1x/Logo web.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="Portfolio Lauryan Gervais - Accueil"/>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Spectral:wght@500;600&display=swap" rel="stylesheet">
+    <!--icon -->
+    <link rel="icon" href="media/1x/Logo web.png">
 
-    <!-- Bootstrap library -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <!-- Google Fonts Spectral & Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Spectral:wght@500;600&display=swap" />
+    
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
 
-    <!-- Css -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Icon Fontawsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Accueil</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container">
+      <div class="h-100 d-flex flex-column justify-content-between align-items-center">
+        
+        <header class="align-self-stretch ">
+          <a href="index.html" class="d-none d-md-block"><img src="media/1x/Logo web.png" alt=""></a>
+          <div class="form-check form-switch d-none d-md-block">
+              <input onclick="toggle()" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun"></i></label>
+          </div>
+        </header>
+        
+        <section class="align-self-stretch flex-fill accueil">
+          <p>Bonjour <br>Je suis</p>
+          <h1>Lauryan Gervais</h1>
+        </section>
+        
+        <nav class="align-self-stretch d-none d-md-flex">
+          <a href="contact.html">Contact <hr></a>
+          <a href="projets.html">Projets <hr></a>
+          <a href="a-propos.html">À propos <hr></a>
+        </nav>
+        <footer class="align-self-stretch text-center">
+          &copy; - Lauryan Gervais 2021
+        </footer>
+      </div>
+    </div>
+    <!-- End your project here-->
 
-    <header>
-        <a href="index.html"><img src="media/1x/Logo web.png" alt=""></a>
-        <div class="form-check form-switch">
-            <input onclick="toggle()" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault"><i class="bi bi-brightness-high-fill"></i></label>
-        </div>
-    </header>
-    <section class="accueil">
-        <p>Bonjour <br>je suis</p>
-        <h1>Lauryan Gervais</h1>
-    </section>
-    <nav>
-        <a href="contact.html">Contact <hr></a>
-        <a href="projets.html">Projets <hr></a>
-        <a href="a-propos.html">À propos <hr></a>
-    </nav>
-
-    <footer>
-        &copy; - Lauryan Gervais 2021
-    </footer>
-
-    <!-- JavaScript files -->
-    <script src="js/themeToggle.js"></script>
-</body>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/themeToggle.js"></script>
+  </body>
 </html>

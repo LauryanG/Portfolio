@@ -1,0 +1,51 @@
+@import "variables.scss";
+
+section.a-propos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+
+    .a-propos-info {
+        display: flex;
+        flex-direction: column;
+        order: 1;
+        height: 40vh;
+
+        p {
+            display: flex;
+            align-items: center;
+            padding: inherit;
+            border: 5px solid $lightPink;
+            background-color: rgba($color: #F0F0F0, $alpha: 0.95);
+            box-shadow: $shadow;
+        }
+    }
+
+    .a-propos-img {
+        img {
+            border-radius: 30px;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .a-propos-info {
+        height: 85% !important;
+        width: 100vw;
+        align-items: center;  
+    }
+}
+@media (max-width: 575.98px) {
+    .container {
+        border: 5px solid $lightPink;
+
+        p {
+            border: none !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+    }
+}

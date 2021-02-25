@@ -1,0 +1,224 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  background-color: #FAFAFA;
+  height: 100vh;
+  width: 100vw;
+}
+
+body h1, body h2, body h3 {
+  font-family: "Spectral", serif;
+  background: -webkit-linear-gradient(#F3CFE9, #8B47B5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body li {
+  list-style: none;
+}
+
+body .container {
+  height: 100vh !important;
+  min-width: 100vw !important;
+}
+
+body footer {
+  font-size: 0.8em;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  font-family: "Spectral", serif;
+  background: -webkit-linear-gradient(#00FFFF, #1813A2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark a {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 40%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+}
+
+nav a {
+  size: 1.250em;
+  text-decoration: none;
+  color: black;
+  padding: 0 0.5em 1.250em;
+}
+
+nav a hr {
+  margin: 0;
+  opacity: 100%;
+}
+
+nav a hr:not([size]) {
+  height: 4px;
+  width: 0;
+  transition: 0.3s ease;
+}
+
+nav a:hover hr:not([size]) {
+  width: auto;
+}
+
+section.accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.accueil p {
+  font-family: "Spectral", serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 4em;
+}
+
+section.accueil h1 {
+  font-size: 5em;
+  text-align: center;
+}
+
+section.a-propos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+}
+
+section.a-propos .a-propos-info {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  height: 40vh;
+}
+
+section.a-propos .a-propos-info p {
+  display: flex;
+  align-items: center;
+  padding: inherit;
+  border: 5px solid #F3CFE9;
+  background-color: rgba(240, 240, 240, 0.95);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
+}
+
+section.a-propos .a-propos-img img {
+  border-radius: 30px;
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .a-propos-info {
+    height: 85% !important;
+    width: 100vw;
+    align-items: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    border: 5px solid #F3CFE9;
+  }
+  .container p {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+section.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+}
+
+section.contact .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  border: 5px solid #F3CFE9;
+  background-color: rgba(240, 240, 240, 0.95);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
+}
+
+section.contact .contact-container .contact-coordonnee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+section.contact .contact-container .contact-coordonnee p {
+  text-align: center;
+}
+
+section.contact .contact-container .contact-boutons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+section.contact .contact-container .contact-boutons .contact-social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section.contact .contact-container .contact-boutons .contact-social li {
+  display: flex;
+  font-size: 1.875em;
+  padding: 5px;
+}
+
+section.contact .contact-img img {
+  border-radius: 30px;
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .contact-container {
+    height: 85% !important;
+    width: 100vw;
+    align-items: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    border: 5px solid #F3CFE9;
+  }
+  .container .contact-container {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

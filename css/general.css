@@ -3,6 +3,7 @@ body {
   color: black;
   background-color: #FAFAFA;
   height: 100vh;
+  width: 100vw;
 }
 
 body h1, body h2, body h3 {
@@ -14,6 +15,19 @@ body h1, body h2, body h3 {
 
 body a {
   text-decoration: none;
+}
+
+body li {
+  list-style: none;
+}
+
+body .container {
+  height: 100vh !important;
+  min-width: 100vw !important;
+}
+
+body footer {
+  font-size: 0.8em;
 }
 
 body.dark {

@@ -1,0 +1,30 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 1.5em;
+
+    a {
+        size: 1.250em;
+        text-decoration: none;
+        color: black;
+        padding: 0 0.5em 1.250em;
+
+        hr {
+            margin: 0;
+            opacity: 100%;
+
+            &:not([size]) {
+                height: 4px;
+                width: 0;
+                transition: 0.3s ease;
+            }
+        }
+    
+        &:hover hr:not([size]) {
+            width: auto;
+        }
+    }
+}

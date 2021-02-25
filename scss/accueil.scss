@@ -1,67 +1,20 @@
 @import "variables.scss";
-// Accueil
 
-body {
+section.accueil {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    header {
-        width: 100vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1em;
-
-        img {
-            width: 40%;
-        }
-    }
-    
-    .accueil {
-        display: flex;
-        flex-direction: column;
-        margin: auto 0;
-    
-        p {
-            font-family: $font-title;
-            text-align: center;
-            font-size: 2em;
-        }
-        h1 {
-            font-size: 3.5em;
-        }
+    p {
+        font-family: $font-title;
+        text-align: center;
+        font-weight: 600;
+        font-size: 4em;
     }
 
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        padding-bottom: 1.5em;
-
-        a {
-            size: 1.250em;
-            text-decoration: none;
-            color: black;
-            padding: 0 0.5em 1.250em;
-
-            hr {
-                margin: 0;
-                opacity: 100%;
-
-                &:not([size]) {
-                    height: 4px;
-                    width: 0;
-                    transition: 0.3s ease;
-                }
-            }
-        
-            &:hover hr:not([size]) {
-                width: auto;
-            }
-        }
+    h1 {
+        font-size: 5em;
+        text-align: center;
     }
 }
