@@ -26,30 +26,40 @@
   <body>
     <!-- Start your project here-->
     <div class="container">
-      <div class="h-100 d-flex flex-column justify-content-between align-items-center">
-        
-        <header class="align-self-stretch ">
-          <a href="index.html" class="d-none d-md-block"><img src="media/1x/Logo web.png" alt=""></a>
-          <div class="form-check form-switch d-none d-md-block">
-              <input onclick="toggle()" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-              <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun d-none"></i></label>
-          </div>
-        </header>
-        
-        <section class="align-self-stretch flex-fill accueil">
-          <p>Bonjour <br>Je suis</p>
-          <h1>Lauryan Gervais</h1>
-        </section>
-        
-        <nav class="align-self-stretch d-none d-md-flex">
-          <a href="contact.html">Contact <hr></a>
-          <a href="projets.html">Projets <hr></a>
-          <a href="a-propos.html">À propos <hr></a>
-        </nav>
-        <footer class="align-self-stretch text-center">
-          &copy; - Lauryan Gervais 2021
-        </footer>
+
+      <header class="header">
+        <div>
+          <a href="index.html">
+              <img src="media/1x/Logo web.png" alt="">
+          </a>
       </div>
+        
+
+        <div class="form-check form-switch toggle">
+          <input onclick="toggle()" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun d-none"></i></label>
+        </div>
+
+        <div class="bouton-menu">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </header>
+
+      <main class="main accueil">
+        <p>Bonjour <br> Je suis</p>
+        <h1>Lauryan Gervais</h1>
+      </main>
+
+      <nav class="nav">
+        <a href="contact.html">Contact <hr></a>
+        <a href="">Projets <hr></a>
+        <a href="">À propos <hr></a>
+      </nav>
+
+      <footer class="footer">
+        &copy; - 2021 - Lauryan Gervais 
+      </footer>
+
     </div>
     <!-- End your project here-->
 

@@ -1,70 +1,53 @@
-section.contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: baseline;
+.contact {
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
-section.contact .contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 40vh;
-  border: 5px solid #F3CFE9;
-  background-color: rgba(240, 240, 240, 0.95);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
-}
-
-section.contact .contact-container .contact-coordonnee {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 2;
-}
-
-section.contact .contact-container .contact-coordonnee p {
+.contact h1, .contact p {
   text-align: center;
 }
 
-section.contact .contact-container .contact-boutons {
-  width: 100%;
+.contact .contact-boite {
+  align-self: center;
+}
+
+.contact .contact-boite .coordonees p {
+  padding: 0 10px;
+  font-size: 1.25em;
+}
+
+.contact .contact-boite .boutons-contact {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 1em;
 }
 
-section.contact .contact-container .contact-boutons .contact-social {
+.contact .contact-boite .boutons-contact button {
+  border: none;
+  background-color: transparent;
+}
+
+.contact .contact-boite .boutons-contact ul {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
 }
 
-section.contact .contact-container .contact-boutons .contact-social li {
-  display: flex;
-  font-size: 1.875em;
-  padding: 5px;
+.contact .contact-boite .boutons-contact ul li {
+  padding: 0 0.3em;
 }
 
-section.contact .contact-img img {
-  border-radius: 30px;
-  max-width: 100%;
+.contact .contact-boite .boutons-contact i {
+  font-size: 1.5em;
 }
 
-@media (max-width: 991.98px) {
-  .contact-container {
-    height: 85% !important;
-    width: 100vw;
-    align-items: center;
-  }
+.contact .contact-img {
+  display: none;
 }
 
-@media (max-width: 575.98px) {
-  .container {
-    border: 5px solid #F3CFE9;
-  }
-  .container .contact-container {
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
+@media (min-width: 768px) {
+  .contact .contact-img {
+    display: block;
   }
 }
 /*# sourceMappingURL=contact.css.map */

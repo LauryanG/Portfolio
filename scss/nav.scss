@@ -1,11 +1,5 @@
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    padding-bottom: 1.5em;
-
+.nav {
+    display: none;
     a {
         size: 1.250em;
         text-decoration: none;
@@ -26,5 +20,11 @@ nav {
         &:hover hr:not([size]) {
             width: auto;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
     }
 }

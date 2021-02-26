@@ -2,31 +2,46 @@ body {
   font-family: "Montserrat", sans-serif;
   color: black;
   background-color: #FAFAFA;
-  height: 100vh;
-  width: 100vw;
 }
 
-body h1, body h2, body h3 {
+body .container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  min-width: 100vw !important;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto 2fr auto auto;
+  justify-items: center;
+}
+
+body .container h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+body .container h1, body .container h2, body .container h3 {
   font-family: "Spectral", serif;
   background: -webkit-linear-gradient(#F3CFE9, #8B47B5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-body a {
-  text-decoration: none;
+body .container i, body .container a, body .container a:active {
+  color: black;
 }
 
-body li {
+body .container ul {
+  margin: 0;
+  padding: 0;
+}
+
+body .container ul li {
   list-style: none;
 }
 
-body .container {
-  height: 100vh !important;
-  min-width: 100vw !important;
-}
-
-body footer {
+body .container footer {
   font-size: 0.8em;
 }
 
@@ -42,7 +57,19 @@ body.dark h1, body.dark h2, body.dark h3 {
   -webkit-text-fill-color: transparent;
 }
 
-body.dark a {
+body.dark a, body.dark i {
   color: white;
+}
+
+@media (min-width: 768px) {
+  body .container h1 {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body .container h1 {
+    font-size: 6em;
+  }
 }
 /*# sourceMappingURL=general.css.map */

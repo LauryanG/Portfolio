@@ -2,31 +2,46 @@ body {
   font-family: "Montserrat", sans-serif;
   color: black;
   background-color: #FAFAFA;
-  height: 100vh;
-  width: 100vw;
 }
 
-body h1, body h2, body h3 {
+body .container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  min-width: 100vw !important;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto 2fr auto auto;
+  justify-items: center;
+}
+
+body .container h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+body .container h1, body .container h2, body .container h3 {
   font-family: "Spectral", serif;
   background: -webkit-linear-gradient(#F3CFE9, #8B47B5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-body a {
-  text-decoration: none;
+body .container i, body .container a, body .container a:active {
+  color: black;
 }
 
-body li {
+body .container ul {
+  margin: 0;
+  padding: 0;
+}
+
+body .container ul li {
   list-style: none;
 }
 
-body .container {
-  height: 100vh !important;
-  min-width: 100vw !important;
-}
-
-body footer {
+body .container footer {
   font-size: 0.8em;
 }
 
@@ -42,183 +57,159 @@ body.dark h1, body.dark h2, body.dark h3 {
   -webkit-text-fill-color: transparent;
 }
 
-body.dark a {
+body.dark a, body.dark i {
   color: white;
 }
 
+@media (min-width: 768px) {
+  body .container h1 {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body .container h1 {
+    font-size: 6em;
+  }
+}
+
 header {
+  width: 100vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 header img {
+  display: block;
   width: 40%;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1.5em;
+header .toggle {
+  display: none;
 }
 
-nav a {
+header .bouton-menu {
+  font-size: 1.3em;
+}
+
+@media (min-width: 768px) {
+  header .toggle {
+    display: block;
+  }
+  header .bouton-menu {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+}
+
+.nav a {
   size: 1.250em;
   text-decoration: none;
   color: black;
   padding: 0 0.5em 1.250em;
 }
 
-nav a hr {
+.nav a hr {
   margin: 0;
   opacity: 100%;
 }
 
-nav a hr:not([size]) {
+.nav a hr:not([size]) {
   height: 4px;
   width: 0;
   transition: 0.3s ease;
 }
 
-nav a:hover hr:not([size]) {
+.nav a:hover hr:not([size]) {
   width: auto;
 }
 
-section.accueil {
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.accueil {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
-section.accueil p {
+.accueil p {
   font-family: "Spectral", serif;
-  text-align: center;
+  font-size: 2.25em;
   font-weight: 600;
-  font-size: 4em;
 }
 
-section.accueil h1 {
-  font-size: 5em;
+@media (min-width: 768px) {
+  .accueil p {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .accueil p {
+    font-size: 4em;
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.contact h1, .contact p {
   text-align: center;
 }
 
-section.a-propos {
+.contact .contact-boite {
+  align-self: center;
+}
+
+.contact .contact-boite .coordonees p {
+  padding: 0 10px;
+  font-size: 1.25em;
+}
+
+.contact .contact-boite .boutons-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.contact .contact-boite .boutons-contact button {
+  border: none;
+  background-color: transparent;
+}
+
+.contact .contact-boite .boutons-contact ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: baseline;
 }
 
-section.a-propos .a-propos-info {
-  display: flex;
-  flex-direction: column;
-  order: 1;
-  height: 40vh;
+.contact .contact-boite .boutons-contact ul li {
+  padding: 0 0.3em;
 }
 
-section.a-propos .a-propos-info p {
-  display: flex;
-  align-items: center;
-  padding: inherit;
-  border: 5px solid #F3CFE9;
-  background-color: rgba(240, 240, 240, 0.95);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
+.contact .contact-boite .boutons-contact i {
+  font-size: 1.5em;
 }
 
-section.a-propos .a-propos-img img {
-  border-radius: 30px;
-  max-width: 100%;
+.contact .contact-img {
+  display: none;
 }
 
-@media (max-width: 991.98px) {
-  .a-propos-info {
-    height: 85% !important;
-    width: 100vw;
-    align-items: center;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .container {
-    border: 5px solid #F3CFE9;
-  }
-  .container p {
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-  }
-}
-
-section.contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: baseline;
-}
-
-section.contact .contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 40vh;
-  border: 5px solid #F3CFE9;
-  background-color: rgba(240, 240, 240, 0.95);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
-}
-
-section.contact .contact-container .contact-coordonnee {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 2;
-}
-
-section.contact .contact-container .contact-coordonnee p {
-  text-align: center;
-}
-
-section.contact .contact-container .contact-boutons {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-section.contact .contact-container .contact-boutons .contact-social {
-  display: flex;
-  justify-content: flex-end;
-}
-
-section.contact .contact-container .contact-boutons .contact-social li {
-  display: flex;
-  font-size: 1.875em;
-  padding: 5px;
-}
-
-section.contact .contact-img img {
-  border-radius: 30px;
-  max-width: 100%;
-}
-
-@media (max-width: 991.98px) {
-  .contact-container {
-    height: 85% !important;
-    width: 100vw;
-    align-items: center;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .container {
-    border: 5px solid #F3CFE9;
-  }
-  .container .contact-container {
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
+@media (min-width: 768px) {
+  .contact .contact-img {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

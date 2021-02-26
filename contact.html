@@ -1,96 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Portfolio Lauryan Gervais - Contact"/>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="description" content="Portfolio Lauryan Gervais - Contact" />
+    <!--icon -->
+    <link rel="icon" href="media/1x/Logo web.png">
 
-  <!--icon -->
-  <link rel="icon" href="media/1x/Logo web.png">
+    <!-- Google Fonts Spectral & Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Spectral:wght@500;600&display=swap" />
+    
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
 
-  <!-- Google Fonts Spectral & Montserrat -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Spectral:wght@500;600&display=swap" />
+    <!-- Icon Fontawsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
 
-  <!-- MDB -->
-  <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Icon Fontawsome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container border-container">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+      <header class="header">
+        <div>
+            <a href="index.html">
+                <img src="media/1x/Logo web.png" alt="">
+            </a>
+        </div>
+        
 
-  <title>Contact</title>
-</head>
-
-<body>
-  <!-- Start your project here-->
-  <div class="container">
-    <div class="h-100 d-flex flex-column justify-content-between align-items-center">
-
-      <header class="align-self-stretch ">
-        <a href="index.html" class="d-none d-md-block"><img src="media/1x/Logo web.png" alt=""></a>
-        <div class="form-check form-switch d-none d-md-block">
+        <div class="form-check form-switch toggle">
           <input onclick="toggle()" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-          <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun"></i></label>
+          <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun d-none"></i></label>
+        </div>
+
+        <div class="bouton-menu">
+          <i class="fas fa-ellipsis-v"></i>
         </div>
       </header>
 
-      <section class="align-self-stretch flex-fill row contact">
-        <div class="contact-info col-5">
+      <main class="main contact">
           <h1>Contact</h1>
-          <div class="contact-container flex-fill">
-            <div class="contact-coordonnee">
-              <p>Téléphone : <span>(514) 607-5891</span></p>
-              <p>Courriel : <span>lauryan-gervais@hotmail.com</span></p>
-            </div>
 
-            <div class="row contact-boutons">
-
-              <div class="col">
-                <button>
-                  CV
-                  <a href="media/CV Lauryan.pdf" download=""><i class="fas fa-download"></i></a>
-                </button>
+          <div class="contact-boite">
+              <div class="coordonees">
+                  <p class="d-flex flex-row flex-wrap justify-content-center">Téléphone : <span>(514) 607-5891</span></p>
+                  <p class="d-flex flex-row flex-wrap justify-content-center">Couriel : <span>lauryan-gervais@hotmail.com</span></p>
               </div>
-
-              <ul class="contact-social col">
-                <li><a href="https://www.linkedin.com/in/lauryan-gervais-b753541b4/" target="_blank"> <i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/LauryanG" target="_blank"> <i class="fab fa-github-square"></i></a></li>
-                <li><a href="https://www.behance.net/lauryan-ge9154" target="_blank"> <i class="fab fa-behance-square"></i></a></li>
-              </ul>
-
-            </div>
+              <div class="boutons-contact">
+                <div>
+                    <button>
+                        CV
+                        <a href="media/CV Lauryan.pdf" download=""><i class="fas fa-download"></i></a>
+                      </button>
+                </div>
+                  <ul>
+                    <li><a href="https://www.linkedin.com/in/lauryan-gervais-b753541b4/" target="_blank"> <i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/LauryanG" target="_blank"> <i class="fab fa-github-square"></i></a></li>
+                    <li><a href="https://www.behance.net/lauryan-ge9154" target="_blank"> <i class="fab fa-behance-square"></i></a></li>
+                  </ul>
+              </div>
           </div>
-        </div>
 
-        <div class="contact-img col-6 d-none d-lg-block">
-          <img src="media/pexels-daria-shevtsova-705675.jpg" alt="">
-        </div>
-      </section>
+          <div class="contact-img">
+              <img src="media/pexels-daria-shevtsova-705675.jpg" alt="">
+          </div>
 
-      <nav class="align-self-stretch d-none d-md-flex">
-        <a href="contact.html">Contact
-          <hr></a>
-        <a href="projets.html">Projets
-          <hr></a>
-        <a href="a-propos.html">À propos
-          <hr></a>
+      </main>
+
+      <nav class="nav">
+        <a href="contact.html">Contact <hr></a>
+        <a href="">Projets <hr></a>
+        <a href="">À propos <hr></a>
       </nav>
-      <footer class="align-self-stretch text-center">
-        &copy; - Lauryan Gervais 2021
+
+      <footer class="footer">
+        &copy; - 2021 - Lauryan Gervais 
       </footer>
+
     </div>
-  </div>
-  <!-- End your project here-->
+    <!-- End your project here-->
 
-  <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript" src="js/themeToggle.js"></script>
-</body>
-
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/themeToggle.js"></script>
+  </body>
 </html>

@@ -1,19 +1,25 @@
-section.accueil {
+.accueil {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
-section.accueil p {
+.accueil p {
   font-family: "Spectral", serif;
-  text-align: center;
+  font-size: 2.25em;
   font-weight: 600;
-  font-size: 4em;
 }
 
-section.accueil h1 {
-  font-size: 5em;
-  text-align: center;
+@media (min-width: 768px) {
+  .accueil p {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .accueil p {
+    font-size: 4em;
+  }
 }
 /*# sourceMappingURL=accueil.css.map */

@@ -1,35 +1,55 @@
 @import "variables.scss";
-
 body {
     font-family: $font-text;
     color: black;
     background-color: $lightBackground;
-    height: 100vh;
-    width: 100vw;
-
-    h1, h2, h3 {
-        font-family: $font-title;
-        background: -webkit-linear-gradient($lightPink, $lightPurple);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    li {
-        list-style: none;
-    }
 
     .container {
-        height: 100vh !important;
-        min-width: 100vw !important;
-    }
+        box-sizing: border-box;
 
-    footer {
-        font-size: 0.8em;
+        margin: 0;
+        padding: 0;
+
+        height: 100vh;
+        min-width: 100vw !important;
+
+        display: grid;
+        gap: 20px;
+        grid-template-rows: auto 2fr auto auto;
+
+        justify-items: center;
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+    
+
+        h1, h2, h3 {
+            font-family: $font-title;
+            background: -webkit-linear-gradient($lightPink, $lightPurple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    
+        }
+    
+        i, a, a:active {
+            color: black;
+        }
+    
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+            }
+        }
+
+        footer {
+            font-size: 0.8em;
+        }
+        
     }
 }
 
@@ -44,7 +64,34 @@ body.dark {
         -webkit-text-fill-color: transparent;
     }
 
-    a {
+    a, i {
         color: white;
     }
+
 }
+
+@media (min-width: 768px) {
+    body {
+        .container {
+
+            
+            h1 {
+                font-size: 4.5em;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        .container {
+            h1 {
+                font-size: 6em;
+            }
+        }
+    }
+}
+// mobile : 320 a 768 (xs, xm, md)
+// Tablette portrais: 768 à 1024 (min width 768)
+// Tablette paysage : 1024 à 1440 (min width 1024)
+// Ordi : 1440 et plus (min width 1400) 
