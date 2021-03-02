@@ -163,6 +163,7 @@ header .bouton-menu {
 .contact {
   display: grid;
   grid-template-rows: auto 1fr;
+  width: 100%;
 }
 
 .contact h1, .contact p {
@@ -171,6 +172,7 @@ header .bouton-menu {
 
 .contact .contact-boite {
   align-self: center;
+  margin-top: -2em;
 }
 
 .contact .contact-boite .coordonees p {
@@ -208,8 +210,61 @@ header .bouton-menu {
 }
 
 @media (min-width: 768px) {
+  .contact {
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: auto 1fr;
+  }
+  .contact h1 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .contact .contact-boite {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 5px solid pink;
+  }
   .contact .contact-img {
     display: block;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    z-index: -1;
+    background-image: url(../media/pexels-daria-shevtsova-705675.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 0.5fr);
+  }
+  .contact h1 {
+    font-size: 72px;
+    text-align: left;
+    grid-column-start: 2;
+  }
+  .contact .contact-boite {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 7;
+  }
+  .contact .contact-img {
+    grid-column-start: 6;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 12;
+    border-radius: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

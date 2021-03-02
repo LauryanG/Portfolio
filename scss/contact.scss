@@ -1,6 +1,7 @@
 .contact {
     display: grid;
     grid-template-rows: auto 1fr;
+    width: 100%;
 
     h1, p {
         text-align: center;
@@ -8,6 +9,7 @@
 
     .contact-boite {
         align-self: center;
+        margin-top: -2em;
 
         .coordonees {
             p {
@@ -49,15 +51,70 @@
 }
 
 @media (min-width: 768px) {
-    .contact {    
+    .contact {  
+        grid-template-columns: repeat(12, auto);
+        grid-template-rows: auto 1fr;
+
+        h1  {
+            grid-column-start: 1;
+            grid-column-end: 13;
+        }
+
+        .contact-boite {
+            grid-column-start: 1;
+            grid-column-end: 13;
+            grid-row-start: 2;
+
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background-color: rgba($color: #F0F0F0, $alpha: 0.9);
+            border: 5px solid pink;
+        }
+
         .contact-img {
             display: block;
+            grid-column-start: 1;
+            grid-column-end: 13;
+            grid-row-start: 2;
+            z-index: -1;
+
+            background-image: url(../media/pexels-daria-shevtsova-705675.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
         }
     }
 }
 
-// @media (min-width: 1440px) {
-//     .contact {    
+@media (min-width: 1440px) {
+    .contact {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(9, 0.5fr);
 
-//     }
-// }
+        h1 {
+            font-size: 72px;
+            text-align: left;
+            grid-column-start: 2;
+        }
+
+        .contact-boite {
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 7;
+        }
+
+        .contact-img {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            grid-row-start: 3;
+            grid-row-end: 12;
+
+            border-radius: 30px;
+        }
+    }
+}
