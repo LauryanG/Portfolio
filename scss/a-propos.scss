@@ -1,4 +1,4 @@
-.contact {
+.a-propos {
     display: grid;
     grid-template-rows: auto 1fr;
     width: 100%;
@@ -7,51 +7,23 @@
         text-align: center;
     }
 
-    .contact-boite {
+    .a-propos-boite {
         align-self: center;
         margin-top: -2em;
 
-        .coordonees {
-            p {
-                padding: 0 10px;
-                font-size: 1.25em;
-            }
-        }
-
-        .boutons-contact {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em;
-
-            button {
-                border: none;
-                background-color: transparent;
-            }
-
-            ul {
-                display: flex;
-                flex-direction: row;
-
-                li {
-                    padding: 0 0.3em;
-                }
-            }
-
-            i {
-                font-size: 1.5em;
-            }
-
+        .a-propos-description {
+            padding: 0 10px;
+            font-size: 1.25em;
         }
     }
 
-    .contact-img {
+    .a-propos-img {
         display: none;
     }
 }
 
 @media (min-width: 768px) {
-    .contact {  
+    .a-propos {  
         grid-template-columns: repeat(12, auto);
         grid-template-rows: auto 1fr;
 
@@ -60,7 +32,7 @@
             grid-column-end: 13;
         }
 
-        .contact-boite {
+        .a-propos-boite {
             grid-column-start: 1;
             grid-column-end: 13;
             grid-row-start: 2;
@@ -75,14 +47,14 @@
             border: 5px solid pink;
         }
 
-        .contact-img {
+        .a-propos-img {
             display: block;
             grid-column-start: 1;
             grid-column-end: 13;
             grid-row-start: 2;
             z-index: -1;
 
-            background-image: url(../media/pexels-daria-shevtsova-705675.jpg);
+            background-image: url(../media/pexels-negative-space-160107.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -91,28 +63,32 @@
 }
 
 @media (min-width: 1440px) {
-    .contact {
+    .a-propos {
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(9, 0.5fr);
 
         h1 {
-            font-size: 4.5em;
-            text-align: left;
-            grid-column-start: 2;
-        }
-
-        .contact-boite {
-            grid-column-start: 2;
-            grid-column-end: 7;
-            grid-row-start: 2;
-            grid-row-end: 7;
-        }
-
-        .contact-img {
-            grid-column-start: 6;
+            font-size: 72px !important;
+            text-align: right;
+            grid-column-start: 8;
             grid-column-end: 12;
-            grid-row-start: 3;
-            grid-row-end: 11;
+            grid-row-start: 4;
+        }
+
+        .a-propos-boite {
+            grid-column-start: 7;
+            grid-column-end: 12;
+            grid-row-start: 5;
+            grid-row-end: 13;
+        }
+
+        .a-propos-img {
+            grid-column-start: 2;
+            grid-column-end: 8;
+            grid-row-start: 2;
+            grid-row-end: 9;
+
+            border-radius: 30px;
         }
     }
 }

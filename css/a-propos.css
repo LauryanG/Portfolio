@@ -1,0 +1,85 @@
+.a-propos {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+}
+
+.a-propos h1, .a-propos p {
+  text-align: center;
+}
+
+.a-propos .a-propos-boite {
+  align-self: center;
+  margin-top: -2em;
+}
+
+.a-propos .a-propos-boite .a-propos-description {
+  padding: 0 10px;
+  font-size: 1.25em;
+}
+
+.a-propos .a-propos-img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .a-propos {
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: auto 1fr;
+  }
+  .a-propos h1 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .a-propos .a-propos-boite {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 5px solid pink;
+  }
+  .a-propos .a-propos-img {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    z-index: -1;
+    background-image: url(../media/pexels-negative-space-160107.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .a-propos {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 0.5fr);
+  }
+  .a-propos h1 {
+    font-size: 72px !important;
+    text-align: right;
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 4;
+  }
+  .a-propos .a-propos-boite {
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 13;
+  }
+  .a-propos .a-propos-img {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 9;
+    border-radius: 30px;
+  }
+}
+/*# sourceMappingURL=a-propos.css.map */
