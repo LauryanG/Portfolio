@@ -6,10 +6,36 @@
     justify-content: center;
     text-align: center;
 
+    .carousel-ext {
+        height: 54px;
+        overflow: hidden;
+    }
+
+    .carousel-int {
+        animation: rotateMobile 12s ease-in-out infinite;
+    }
     p {
         font-family: $font-title;
         font-size: 2.25em;
         font-weight: 600;
+    }
+
+    @keyframes rotateMobile {
+        0%, 20% {
+            transform: translateY(0);
+        }
+        25%,45% {
+            transform: translateY(-54px);
+        }
+        50%,70% {
+            transform: translateY(-54px * 2);
+        }
+        75%,95% {
+            transform: translateY(-54px * 3);
+        }
+        100% {
+            transform: translateY(-54px * 4);
+        }
     }
 }
 
@@ -18,6 +44,31 @@
         p {
             font-size: 3em;
         }
+
+        .carousel-ext {
+            height: 94px;
+        }
+        .carousel-int {
+            animation: rotateTablette 12s ease-in-out infinite;
+        }
+        
+        @keyframes rotateTablette {
+            0%, 20% {
+                transform: translateY(0);
+            }
+            25%,45% {
+                transform: translateY(-94px);
+            }
+            50%,70% {
+                transform: translateY(-94px * 2);
+            }
+            75%,95% {
+                transform: translateY(-94px * 3);
+            }
+            100% {
+                transform: translateY(-94px * 4);
+            }
+        }
     }
 }
 
@@ -25,6 +76,31 @@
     .accueil {
         p {
             font-size: 4em;
+        }
+
+        .carousel-ext {
+            height: 123px;
+        }
+        .carousel-int {
+            animation: rotateOrdi 12s ease-in-out infinite;
+        }
+        
+        @keyframes rotateOrdi {
+            0%, 20% {
+                transform: translateY(0);
+            }
+            25%,45% {
+                transform: translateY(-123px);
+            }
+            50%,70% {
+                transform: translateY(-123px * 2);
+            }
+            75%,95% {
+                transform: translateY(-123px * 3);
+            }
+            100% {
+                transform: translateY(-123px * 4);
+            }
         }
     }
 }

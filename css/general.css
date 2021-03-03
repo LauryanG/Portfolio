@@ -65,6 +65,16 @@ body.dark a, body.dark i {
   body .container h1 {
     font-size: 4.5em;
   }
+  body .container .contact-boite,
+  body .container .a-propos-boite {
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 5px solid #8B47B5;
+  }
+  body.dark .container .contact-boite,
+  body.dark .container .a-propos-boite {
+    background-color: rgba(141, 140, 140, 0.9);
+    border: 5px solid #00FFFF;
+  }
 }
 
 @media (min-width: 1440px) {

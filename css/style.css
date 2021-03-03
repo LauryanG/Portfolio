@@ -65,6 +65,16 @@ body.dark a, body.dark i {
   body .container h1 {
     font-size: 4.5em;
   }
+  body .container .contact-boite,
+  body .container .a-propos-boite {
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 5px solid #8B47B5;
+  }
+  body.dark .container .contact-boite,
+  body.dark .container .a-propos-boite {
+    background-color: rgba(141, 140, 140, 0.9);
+    border: 5px solid #00FFFF;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -142,21 +152,94 @@ header .bouton-menu {
   text-align: center;
 }
 
+.accueil .carousel-ext {
+  height: 54px;
+  overflow: hidden;
+}
+
+.accueil .carousel-int {
+  animation: rotateMobile 12s ease-in-out infinite;
+}
+
 .accueil p {
   font-family: "Spectral", serif;
   font-size: 2.25em;
   font-weight: 600;
 }
 
+@keyframes rotateMobile {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  25%, 45% {
+    transform: translateY(-54px);
+  }
+  50%, 70% {
+    transform: translateY(-108px);
+  }
+  75%, 95% {
+    transform: translateY(-162px);
+  }
+  100% {
+    transform: translateY(-216px);
+  }
+}
+
 @media (min-width: 768px) {
   .accueil p {
     font-size: 3em;
+  }
+  .accueil .carousel-ext {
+    height: 94px;
+  }
+  .accueil .carousel-int {
+    animation: rotateTablette 12s ease-in-out infinite;
+  }
+  @keyframes rotateTablette {
+    0%, 20% {
+      transform: translateY(0);
+    }
+    25%, 45% {
+      transform: translateY(-94px);
+    }
+    50%, 70% {
+      transform: translateY(-188px);
+    }
+    75%, 95% {
+      transform: translateY(-282px);
+    }
+    100% {
+      transform: translateY(-376px);
+    }
   }
 }
 
 @media (min-width: 1440px) {
   .accueil p {
     font-size: 4em;
+  }
+  .accueil .carousel-ext {
+    height: 123px;
+  }
+  .accueil .carousel-int {
+    animation: rotateOrdi 12s ease-in-out infinite;
+  }
+  @keyframes rotateOrdi {
+    0%, 20% {
+      transform: translateY(0);
+    }
+    25%, 45% {
+      transform: translateY(-123px);
+    }
+    50%, 70% {
+      transform: translateY(-246px);
+    }
+    75%, 95% {
+      transform: translateY(-369px);
+    }
+    100% {
+      transform: translateY(-492px);
+    }
   }
 }
 
@@ -227,8 +310,6 @@ header .bouton-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(240, 240, 240, 0.9);
-    border: 5px solid pink;
   }
   .contact .contact-img {
     display: block;
@@ -236,6 +317,7 @@ header .bouton-menu {
     grid-column-end: 13;
     grid-row-start: 2;
     z-index: -1;
+    border-radius: 30px;
     background-image: url(../media/pexels-daria-shevtsova-705675.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -309,8 +391,6 @@ header .bouton-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(240, 240, 240, 0.9);
-    border: 5px solid pink;
   }
   .a-propos .a-propos-img {
     display: block;

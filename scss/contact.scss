@@ -70,9 +70,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            background-color: rgba($color: #F0F0F0, $alpha: 0.9);
-            border: 5px solid pink;
         }
 
         .contact-img {
@@ -82,6 +79,8 @@
             grid-row-start: 2;
             z-index: -1;
 
+            border-radius: 30px;
+            
             background-image: url(../media/pexels-daria-shevtsova-705675.jpg);
             background-repeat: no-repeat;
             background-size: cover;

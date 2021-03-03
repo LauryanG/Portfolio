@@ -40,8 +40,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(240, 240, 240, 0.9);
-    border: 5px solid pink;
   }
   .a-propos .a-propos-img {
     display: block;
