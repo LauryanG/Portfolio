@@ -76,7 +76,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 1em;
+    padding: 0 1em;
     height: fit-content;
     cursor: default;
     transition: 0.2s;
@@ -108,6 +108,27 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+  }
+  .projets .listeProjets li.droite {
+    grid-template-columns: auto 100px;
+  }
+  .projets .listeProjets li.droite .unProjet {
+    grid-column-start: 1;
+  }
+  .projets .listeProjets li.droite .unProjet .titre {
+    justify-content: flex-end;
+  }
+  .projets .listeProjets li.droite .unProjet .description {
+    max-height: fit-content;
+    overflow: visible;
+  }
+  .projets .listeProjets li.droite .unProjet .description p {
+    text-align: right;
+    padding: 0 1em;
+  }
+  .projets .listeProjets li.droite .image-projet {
+    display: block;
+    grid-column-start: 2;
   }
 }
 

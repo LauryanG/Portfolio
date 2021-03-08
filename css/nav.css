@@ -35,7 +35,7 @@ nav.ouvert {
     flex-direction: row;
     position: relative;
     right: 0;
-    background-color: transparent;
+    background-color: transparent !important;
     width: auto;
     height: auto;
   }
