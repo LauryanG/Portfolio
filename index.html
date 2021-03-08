@@ -21,6 +21,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+
     <script src="js/jquery-3.6.0.min.js"></script>
 
     <title>Accueil</title>
@@ -31,19 +32,20 @@
 
       <header class="header">
         <div>
-          <a href="index.html">
-              <img class="logo" src="media/logo/logoMauve.png" alt="Logo Lauryan Gervais">
-          </a>
-      </div>
+            <a href="index.html">
+                <img class="logo" src="media/logo/logoMauve.png" alt="Logo Lauryan Gervais">
+            </a>
+        </div>
         
 
         <div class="form-check form-switch toggle">
           <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun d-none"></i></label>
         </div>
 
-        <div class="bouton-menu">
+        <button class="bouton-menu">
           <i class="fas fa-ellipsis-v"></i>
-        </div>
+        </button>
       </header>
 
       <main class="main accueil">
@@ -62,12 +64,10 @@
         <a href="contact.html">Contact <hr></a>
         <a href="projets.html">Projets <hr></a>
         <a href="a-propos.html">À propos <hr></a>
-        <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun d-none"></i></label>
+        <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-sun d-block d-sm-none"></i></label>
       </nav>
 
-      <footer class="footer">
-        &copy; - 2021 - Lauryan Gervais 
-      </footer>
+      <footer class="footer"></footer>
 
     </div>
     <!-- End your project here-->
@@ -77,5 +77,6 @@
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/themeToggle.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
   </body>
 </html>

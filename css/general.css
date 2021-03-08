@@ -32,6 +32,10 @@ body .container i, body .container a, body .container a:active {
   color: black;
 }
 
+body .container .nav {
+  background-color: #FFFAFE;
+}
+
 body .container ul {
   margin: 0;
   padding: 0;
@@ -59,6 +63,10 @@ body.dark h1, body.dark h2, body.dark h3 {
 
 body.dark a, body.dark i {
   color: white;
+}
+
+body.dark .nav {
+  background-color: #001515;
 }
 
 @media (min-width: 768px) {

@@ -32,6 +32,10 @@ body .container i, body .container a, body .container a:active {
   color: black;
 }
 
+body .container .nav {
+  background-color: #FFFAFE;
+}
+
 body .container ul {
   margin: 0;
   padding: 0;
@@ -59,6 +63,10 @@ body.dark h1, body.dark h2, body.dark h3 {
 
 body.dark a, body.dark i {
   color: white;
+}
+
+body.dark .nav {
+  background-color: #001515;
 }
 
 @media (min-width: 768px) {
@@ -119,6 +127,8 @@ header .toggle {
 header .bouton-menu {
   font-size: 1.3em;
   z-index: 4;
+  border: none;
+  background-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -134,6 +144,7 @@ header .bouton-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: fixed;
   right: 100vw;
   z-index: 3;
@@ -151,19 +162,13 @@ header .bouton-menu {
   display: none;
 }
 
-.nav .ouvert {
-  right: 0;
-  animation-name: menuOuvert;
-  animation-duration: 1s;
+.nav label {
+  font-size: 2em;
 }
 
-@keyframes menuOuvert {
-  from {
-    right: 100vw;
-  }
-  to {
-    right: 0;
-  }
+nav.ouvert {
+  right: 0;
+  transition: right 1s;
 }
 
 @media (min-width: 768px) {
