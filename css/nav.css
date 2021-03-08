@@ -1,32 +1,69 @@
 .nav {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: 100vw;
+  z-index: 3;
+  background-color: #FAFAFA;
+  width: 100vw;
+  height: 100vh;
 }
 
 .nav a {
-  size: 1.250em;
-  text-decoration: none;
-  color: black;
-  padding: 0 0.5em 1.250em;
+  margin: 1em;
+  font-size: 2em;
 }
 
 .nav a hr {
-  margin: 0;
-  opacity: 100%;
+  display: none;
 }
 
-.nav a hr:not([size]) {
-  height: 4px;
-  width: 0;
-  transition: 0.3s ease;
+.nav .ouvert {
+  right: 0;
+  animation-name: menuOuvert;
+  animation-duration: 1s;
 }
 
-.nav a:hover hr:not([size]) {
-  width: auto;
+@keyframes menuOuvert {
+  from {
+    right: 100vw;
+  }
+  to {
+    right: 0;
+  }
 }
 
 @media (min-width: 768px) {
   .nav {
     display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 0;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+  }
+  .nav a {
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0 0.5em 1.250em;
+  }
+  .nav a:hover hr {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  .nav a hr {
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 0;
+    opacity: 100%;
+  }
+  .nav hr.active {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=nav.css.map */

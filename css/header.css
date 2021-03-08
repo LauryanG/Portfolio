@@ -17,5 +17,15 @@ header .toggle {
 
 header .bouton-menu {
   font-size: 1.3em;
+  z-index: 4;
+}
+
+@media (min-width: 768px) {
+  header .toggle {
+    display: block;
+  }
+  header .bouton-menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=header.css.map */

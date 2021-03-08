@@ -81,6 +81,22 @@ body.dark a, body.dark i {
   body .container h1 {
     font-size: 6em;
   }
+  body .container .contact-boite,
+  body .container .a-propos-boite,
+  body .container .image-projet {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
+  }
+  body .container .image-projet {
+    border: 3px solid #8B47B5;
+  }
+  body.dark .container .contact-boite,
+  body.dark .container .a-propos-boite,
+  body.dark .container .image-projet {
+    box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.25), 0 3px 8px 2px rgba(255, 255, 255, 0.48);
+  }
+  body.dark .container .image-projet {
+    border: 3px solid #00FFFF;
+  }
 }
 
 header {
@@ -102,6 +118,7 @@ header .toggle {
 
 header .bouton-menu {
   font-size: 1.3em;
+  z-index: 4;
 }
 
 @media (min-width: 768px) {
@@ -114,34 +131,71 @@ header .bouton-menu {
 }
 
 .nav {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: 100vw;
+  z-index: 3;
+  background-color: #FAFAFA;
+  width: 100vw;
+  height: 100vh;
 }
 
 .nav a {
-  size: 1.250em;
-  text-decoration: none;
-  color: black;
-  padding: 0 0.5em 1.250em;
+  margin: 1em;
+  font-size: 2em;
 }
 
 .nav a hr {
-  margin: 0;
-  opacity: 100%;
+  display: none;
 }
 
-.nav a hr:not([size]) {
-  height: 4px;
-  width: 0;
-  transition: 0.3s ease;
+.nav .ouvert {
+  right: 0;
+  animation-name: menuOuvert;
+  animation-duration: 1s;
 }
 
-.nav a:hover hr:not([size]) {
-  width: auto;
+@keyframes menuOuvert {
+  from {
+    right: 100vw;
+  }
+  to {
+    right: 0;
+  }
 }
 
 @media (min-width: 768px) {
   .nav {
     display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 0;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+  }
+  .nav a {
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0 0.5em 1.250em;
+  }
+  .nav a:hover hr {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  .nav a hr {
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 0;
+    opacity: 100%;
+  }
+  .nav hr.active {
+    width: 100%;
   }
 }
 
@@ -361,11 +415,10 @@ header .bouton-menu {
 
 .a-propos .a-propos-boite {
   align-self: center;
-  margin-top: -2em;
 }
 
 .a-propos .a-propos-boite .a-propos-description {
-  padding: 0 10px;
+  padding: 0 1em;
   font-size: 1.25em;
 }
 
@@ -423,12 +476,171 @@ header .bouton-menu {
     grid-row-start: 5;
     grid-row-end: 13;
   }
+  .a-propos .a-propos-boite .a-propos-description {
+    font-size: 1.12em;
+  }
   .a-propos .a-propos-img {
     grid-column-start: 2;
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 9;
     border-radius: 30px;
+  }
+}
+
+.projets {
+  width: 100%;
+}
+
+.projets h1,
+.projets h2 {
+  text-align: center;
+}
+
+.projets .listeProjets {
+  width: 100%;
+}
+
+.projets .listeProjets li {
+  margin: 1.25em 0;
+}
+
+.projets .listeProjets li .titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.375em;
+  cursor: pointer;
+  transition: 0.2s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.projets .listeProjets li .ouvert {
+  height: 100vh;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.projets .listeProjets li .description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.projets .listeProjets li .description p {
+  padding: 0 1em;
+}
+
+.projets .listeProjets li .image-projet {
+  display: none;
+}
+
+.projets .listeProjets .image-projet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .projets {
+    width: 100%;
+  }
+  .projets h1 {
+    text-align: center;
+  }
+  .projets .listeProjets {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .projets .listeProjets li {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100px auto;
+    align-items: center;
+    margin: 1.25em 0;
+  }
+  .projets .listeProjets li .unProjet {
+    grid-column-start: 2;
+  }
+  .projets .listeProjets li .unProjet .titre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+    height: fit-content;
+    cursor: default;
+    transition: 0.2s;
+    background-image: none !important;
+  }
+  .projets .listeProjets li .unProjet .ouvert {
+    height: 100vh;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .projets .listeProjets li .unProjet .description {
+    max-height: fit-content;
+    overflow: visible;
+  }
+  .projets .listeProjets li .unProjet .description p {
+    padding: 0 1em;
+  }
+  .projets .listeProjets li .image-projet {
+    display: block;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .projets .listeProjets li .image-projet img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .projets {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .projets h1 {
+    text-align: center;
+  }
+  .projets .listeProjets {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+  .projets .listeProjets li {
+    display: block;
+    margin: 1.25em;
+  }
+  .projets .listeProjets li .unProjet .titre {
+    display: none;
+  }
+  .projets .listeProjets li .unProjet .description {
+    display: none;
+  }
+  .projets .listeProjets li .image-projet {
+    display: block;
+    height: 240px;
+    width: 240px;
+  }
+  .projets .listeProjets li .image-projet img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

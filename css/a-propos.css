@@ -10,11 +10,10 @@
 
 .a-propos .a-propos-boite {
   align-self: center;
-  margin-top: -2em;
 }
 
 .a-propos .a-propos-boite .a-propos-description {
-  padding: 0 10px;
+  padding: 0 1em;
   font-size: 1.25em;
 }
 
@@ -71,6 +70,9 @@
     grid-column-end: 12;
     grid-row-start: 5;
     grid-row-end: 13;
+  }
+  .a-propos .a-propos-boite .a-propos-description {
+    font-size: 1.12em;
   }
   .a-propos .a-propos-img {
     grid-column-start: 2;
