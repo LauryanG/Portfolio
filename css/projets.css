@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.projets h2 {
+  display: none;
+}
+
 .projets .listeProjets {
   width: 100%;
 }
@@ -28,9 +32,10 @@
 }
 
 .projets .listeProjets li .ouvert {
-  height: 100vh;
-  width: 100%;
-  align-items: flex-end;
+  height: 60vh;
+  max-width: 100%;
+  background-position: center center;
+  background-size: contain;
 }
 
 .projets .listeProjets li .description {
@@ -51,12 +56,19 @@
   display: none;
 }
 
+.projets .monCarousel {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .projets {
     width: 100%;
   }
   .projets h1 {
     text-align: center;
+  }
+  .projets h2 {
+    display: block;
   }
   .projets .listeProjets {
     width: 90%;
@@ -172,6 +184,10 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+  }
+  .projets .monCarousel {
+    display: block;
+    width: 85vw;
   }
 }
 /*# sourceMappingURL=projets.css.map */

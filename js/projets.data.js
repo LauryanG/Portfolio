@@ -27,6 +27,6 @@ let projets = [
     {
         titre: "TIM 2020",
         description: "Projet d'équipe de développement web. Le projet consiste à repenser le design et programmer un nouveau site départemental pour la technique d'intégration multimédia du collège de Maisonneuve.",
-        images: ["../media/media-projets/tim/WEB.mp4"]
+        images: ["../media/media-projets/tim/accueil_tim.PNG", "../media/media-projets/tim/cours_tim.PNG", "../media/media-projets/tim/prof_tim.PNG", "../media/media-projets/tim/vie_tim.PNG", "../media/media-projets/tim/stage_tim.PNG", "../media/media-projets/tim/evenement_tim.PNG"]
     }
 ]

@@ -5,6 +5,9 @@
     h2 {
         text-align: center;
     }
+    h2 {
+        display: none;
+    }
 
     .listeProjets {
         width: 100%;
@@ -25,9 +28,10 @@
             }
 
             .ouvert {
-                height: 100vh;
-                width: 100%;
-                align-items: flex-end;
+                height: 60vh;
+                max-width: 100%;
+                background-position: center center;
+                background-size: contain;
             }
 
             .description {
@@ -49,6 +53,10 @@
             display: none;
         }
     }
+
+    .monCarousel {
+        display: none;
+    }
 }
 
 
@@ -58,6 +66,9 @@
     
         h1 {
             text-align: center;
+        }
+        h2 {
+            display: block;
         }
     
         .listeProjets {
@@ -197,6 +208,12 @@
                 }
             }
     
+        }
+
+        .monCarousel {
+            display: block;
+
+            width: 85vw;
         }
     }
 }
