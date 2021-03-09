@@ -44,6 +44,10 @@ $( ".image-projet" ).click(function() {
   let tabImages = projets[$(this).attr('id')].images;
   console.log(tabImages);
 
+  // Vider le carousel...
+  $( ".carousel-inner" ).empty();
+
+  // Et le remplir avec les images du projet cliqué...
   for (let i = 0; i < tabImages.length; i++) {
     $( ".carousel-inner" ).append( "<div class=\"carousel-item\"><img src=\"" + tabImages[i] + "\"class=\"d-block w-100\" alt=\"...\"/></div>" );
   }
