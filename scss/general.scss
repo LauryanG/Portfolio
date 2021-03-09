@@ -91,6 +91,9 @@ body.dark {
                 background-color: rgba($color: #F0F0F0, $alpha: 0.9);
                 border: 5px solid $lightPurple;
             }
+            .card-body {
+                background-color:  #F0F0F0;
+            }
         }
     }
 
@@ -100,6 +103,10 @@ body.dark {
             .a-propos-boite {
                 background-color: rgba($color: #8D8C8C, $alpha: 0.9);
                 border: 5px solid $darkAqua;
+            }
+
+            .card-body {
+                background-color:  #8D8C8C;
             }
         }
     }
