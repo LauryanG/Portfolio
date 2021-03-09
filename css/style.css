@@ -78,10 +78,16 @@ body.dark .nav {
     background-color: rgba(240, 240, 240, 0.9);
     border: 5px solid #8B47B5;
   }
+  body .container .card-body {
+    background-color: #F0F0F0;
+  }
   body.dark .container .contact-boite,
   body.dark .container .a-propos-boite {
     background-color: rgba(141, 140, 140, 0.9);
     border: 5px solid #00FFFF;
+  }
+  body.dark .container .card-body {
+    background-color: #8D8C8C;
   }
 }
 
@@ -636,6 +642,20 @@ nav.ouvert {
   .projets .listeProjets li.droite .image-projet {
     display: block;
     grid-column-start: 2;
+  }
+  .projets .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .projets .modal-content .modal-body {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+  .projets .modal-content .modal-body .carousel-control-prev,
+  .projets .modal-content .modal-body .carousel-control-next {
+    background-color: transparent;
+    border: none;
   }
 }
 
