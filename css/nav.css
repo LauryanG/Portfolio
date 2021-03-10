@@ -57,6 +57,9 @@ nav.ouvert {
     margin: 0;
     opacity: 100%;
   }
+  .nav a hr.pageActive {
+    width: 100%;
+  }
   .nav hr.active {
     width: 100%;
   }

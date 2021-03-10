@@ -18,6 +18,7 @@
             display: none;
         }
     }
+
     label {
         font-size: 2em;
     }
@@ -57,6 +58,9 @@ nav.ouvert {
                 height: 2px;
                 margin: 0;
                 opacity: 100%; 
+            }
+            hr.pageActive {
+                width: 100%;
             }
         }
 
