@@ -1,37 +1,17 @@
+// Ouvre et ferme le menu mobile lorsque l'on clique sur le bouton
 $( ".bouton-menu" ).click(function() {
     $( ".nav" ).toggleClass( "ouvert" );
 });
 
-// $(document).ready(function() {
+// Ajoute la classe pageActive à la page que nous sommes.
+$(document).ready(function ($) {
+    let url = window.location.href;
+    let pages = url;
+    $('.nav a').each(function () {
+        let pageActive = this.href;
 
-//     // Get current page URL
-//     var url = window.location.href;
-   
-//     // remove # from URL
-//     url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
-   
-//     // remove parameters from URL
-//     url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
-   
-//     // select file name
-//     url = url.substr(url.lastIndexOf("/") + 1);
-    
-//     // If file name not avilable
-//     if(url == ''){
-//     url = 'index.html';
-//     }
-    
-//     // Loop all menu items
-//     $('nav a').each(function(){
-   
-//      // select href
-//      var href = $(this).find('a').attr('href');
-    
-//      // Check filename
-//      if(url == href){
-   
-//       // Add active class
-//       $(this).addClass('active');
-//      }
-//     });
-//    });
+        if (pages == pageActive) {
+            $(this).children().addClass("pageActive");
+        }
+    });
+});
