@@ -63,5 +63,12 @@ let projets = [
         images: ["media/media-projets/mustache man/Gervais_Affiche_TP2B.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_HUD.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_Instruction.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_Intro.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_Perdu.png"],
         video: false,
         videos: [""]
+    },
+    {
+        titre: "Les montagnes noires",
+        description: "Création d'une animation avec After Effects avec un effet de parallax sur des montagnes dessiner sur Photoshop.",
+        images: ["media/media-projets/montagnesNoires/montagnes1.png"],
+        video: true,
+        videos: ["media/media-projets/montagnesNoires/trailer-2.0.mp4"]
     }
 ]
