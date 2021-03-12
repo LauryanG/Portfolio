@@ -13,16 +13,19 @@ if(themeSwitch) {
 
     darkThemeSelected? document.body.classList.add("dark"):document.body.classList.remove("dark");
 
-    // darkThemeSelected? document.getElementsByClassName("logo").src = "media/logo/logoBleu.png" : document.getElementsByClassName("logo").src = "media/logo/logoMauve.png";
+    // Change le logo selon le theme
+    darkThemeSelected? $(".logo").attr("src","media/logo/logoBleu.png"):$(".logo").attr("src","media/logo/logoMauve.png");
   }
 
 
   function resetTheme() {
     if(themeSwitch.checked) { // dark theme has been selected
       document.body.classList.add('dark');
+      $(".logo").attr("src","media/logo/logoBleu.png");
       localStorage.setItem('themeSwitch', 'dark'); // save theme selection 
     } else {
       document.body.classList.remove('dark');
+      $(".logo").attr("src","media/logo/logoMauve.png");
       localStorage.removeItem('themeSwitch'); // reset theme selection 
     } 
   };

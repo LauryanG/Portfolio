@@ -4,7 +4,6 @@ function afficherProjet() {
     let id = "";
 
     // Parcourir le tableau projets pour générer les projets et injecter le code HTML
-
     for (let i = 0; i < lesProjets.length; i++) {
       id = i;
 
@@ -40,9 +39,8 @@ if (window.matchMedia('(max-width: 768px)').matches)
 }
 
 $( ".image-projet" ).click(function() {
-
+  // Va chercher le tableau contenant les images du projet cliquer
   let tabImages = projets[$(this).attr('id')].images;
-  console.log(tabImages);
 
   // Vider le carousel...
   $( ".carousel-inner" ).empty();
@@ -52,8 +50,18 @@ $( ".image-projet" ).click(function() {
     $( ".carousel-inner" ).append( "<div class=\"carousel-item\"><img src=\"" + tabImages[i] + "\"class=\"d-block w-100\" alt=\"...\"/></div>" );
   }
 
+  // S'il y a des vidéos, ajouter les vidéos dans le carousel.
+  let video = projets[$(this).attr('id')].video;
+  if(video == true) {
+    let tabVideo = projets[$(this).attr('id')].videos;
+    for (let i = 0; i < tabVideo.length; i++) {
+      $( ".carousel-inner" ).append( "<div class=\"carousel-item\"> <div class=\"embed-responsive embed-responsive-16by9\"> <iframe class=\"embed-responsive-item\" src=\"" + tabVideo[i] + "\"allowfullscreen></iframe> </div></div>" );
+    }
+  }
+  // Ajoute la classe active au premier div
   $( ".carousel-inner div:first-of-type" ).addClass( "active" );
-
+  // Ajoute le titre et la description aux endroits indiquer
   $(".card-title").html(projets[$(this).attr('id')].titre);
   $(".card-text").html(projets[$(this).attr('id')].description);
 });
+
