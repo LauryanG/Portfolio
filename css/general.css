@@ -71,34 +71,36 @@ body.dark .nav {
 
 @media (min-width: 768px) {
   body .container h1 {
-    font-size: 4.5em;
+    font-size: 3.5em;
   }
   body .container .contact-boite,
   body .container .a-propos-boite {
-    background-color: rgba(240, 240, 240, 0.9);
-    border: 5px solid #8B47B5;
+    background-color: rgba(240, 240, 240, 0.96);
   }
   body .container .card-body {
     background-color: #F0F0F0;
   }
   body.dark .container .contact-boite,
   body.dark .container .a-propos-boite {
-    background-color: rgba(141, 140, 140, 0.9);
-    border: 5px solid #00FFFF;
+    background-color: rgba(141, 140, 140, 0.6);
   }
   body.dark .container .card-body {
     background-color: #181818;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   body .container h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
   body .container .contact-boite,
   body .container .a-propos-boite,
   body .container .image-projet {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
+  }
+  body .container .contact-boite,
+  body .container .a-propos-boite {
+    border: 5px solid #8B47B5;
   }
   body .container .image-projet {
     border: 3px solid #8B47B5;
@@ -107,6 +109,10 @@ body.dark .nav {
   body.dark .container .a-propos-boite,
   body.dark .container .image-projet {
     box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.25), 0 3px 8px 2px rgba(255, 255, 255, 0.48);
+  }
+  body.dark .container .contact-boite,
+  body.dark .container .a-propos-boite {
+    border: 5px solid #00FFFF;
   }
   body.dark .container .image-projet {
     border: 3px solid #00FFFF;

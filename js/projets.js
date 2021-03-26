@@ -25,18 +25,25 @@ $( ".listeProjets li:even" ).addClass('droite');
 
 //   do functionality on screens smaller than 768px
 //   Toggle la classe ouvert des li lorsque cliquer
-if (window.matchMedia('(max-width: 768px)').matches)
-{
-  $( ".titre" ).click(function() {
-    $( this ).toggleClass("ouvert");
-    let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-  });
-}
+$(window).resize(function() {
+  let viewportWidth = $(window).width();
+  if (viewportWidth <= 768) {
+    console.log(viewportWidth);
+    $( ".titre" ).click(function() {
+      $( this ).toggleClass("ouvert");
+      let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+  }
+  if (viewportWidth > 769) {
+    $( ".titre" ).attr("onclick", "").unbind("click");
+  }
+});
+
 
 $( ".image-projet" ).click(function() {
   // Va chercher le tableau contenant les images du projet cliquer
@@ -47,7 +54,7 @@ $( ".image-projet" ).click(function() {
 
   // Et le remplir avec les images du projet cliqué...
   for (let i = 0; i < tabImages.length; i++) {
-    $( ".carousel-inner" ).append( "<div class=\"carousel-item\"><img src=\"" + tabImages[i] + "\"class=\"d-block w-100\" alt=\"...\"/></div>" );
+    $( ".carousel-inner" ).append( "<div class=\"carousel-item\"><img src=\"" + tabImages[i] + "\"class=\"d-block w-100 container-fluid\" alt=\"...\"/></div>" );
   }
 
   // S'il y a des vidéos, ajouter les vidéos dans le carousel.
@@ -55,7 +62,7 @@ $( ".image-projet" ).click(function() {
   if(video == true) {
     let tabVideo = projets[$(this).attr('id')].videos;
     for (let i = 0; i < tabVideo.length; i++) {
-      $( ".carousel-inner" ).append( "<div class=\"carousel-item\"> <div class=\"embed-responsive embed-responsive-16by9\"> <iframe class=\"embed-responsive-item\" src=\"" + tabVideo[i] + "\"allowfullscreen></iframe> </div></div>" );
+      $( ".carousel-inner" ).append( "<div class=\"carousel-item\"> <div class=\"embed-responsive embed-responsive-16by9\"> <video class=\"embed-responsive-item\" controls> <source src=\"" + tabVideo[i] + "\" type=\"video/mp4\"> </video> </div></div>" );
     }
   }
   // Ajoute la classe active au premier div

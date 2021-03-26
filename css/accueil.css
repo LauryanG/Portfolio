@@ -40,10 +40,10 @@
 
 @media (min-width: 768px) {
   .accueil p {
-    font-size: 3em;
+    font-size: 3.5em;
   }
   .accueil .carousel-ext {
-    height: 94px;
+    height: 75px;
   }
   .accueil .carousel-int {
     animation: rotateTablette 12s ease-in-out infinite;
@@ -53,26 +53,26 @@
       transform: translateY(0);
     }
     25%, 45% {
-      transform: translateY(-94px);
+      transform: translateY(-75px);
     }
     50%, 70% {
-      transform: translateY(-188px);
+      transform: translateY(-150px);
     }
     75%, 95% {
-      transform: translateY(-282px);
+      transform: translateY(-225px);
     }
     100% {
-      transform: translateY(-376px);
+      transform: translateY(-300px);
     }
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   .accueil p {
     font-size: 4em;
   }
   .accueil .carousel-ext {
-    height: 123px;
+    height: 84px;
   }
   .accueil .carousel-int {
     animation: rotateOrdi 12s ease-in-out infinite;
@@ -82,16 +82,16 @@
       transform: translateY(0);
     }
     25%, 45% {
-      transform: translateY(-123px);
+      transform: translateY(-84px);
     }
     50%, 70% {
-      transform: translateY(-246px);
+      transform: translateY(-168px);
     }
     75%, 95% {
-      transform: translateY(-369px);
+      transform: translateY(-252px);
     }
     100% {
-      transform: translateY(-492px);
+      transform: translateY(-336px);
     }
   }
 }

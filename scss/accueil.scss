@@ -42,11 +42,11 @@
 @media (min-width: 768px) {
     .accueil {    
         p {
-            font-size: 3em;
+            font-size: 3.5em;
         }
 
         .carousel-ext {
-            height: 94px;
+            height: 75px;
         }
         .carousel-int {
             animation: rotateTablette 12s ease-in-out infinite;
@@ -57,29 +57,29 @@
                 transform: translateY(0);
             }
             25%,45% {
-                transform: translateY(-94px);
+                transform: translateY(-75px);
             }
             50%,70% {
-                transform: translateY(-94px * 2);
+                transform: translateY(-75px * 2);
             }
             75%,95% {
-                transform: translateY(-94px * 3);
+                transform: translateY(-75px * 3);
             }
             100% {
-                transform: translateY(-94px * 4);
+                transform: translateY(-75px * 4);
             }
         }
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
     .accueil {
         p {
             font-size: 4em;
         }
 
         .carousel-ext {
-            height: 123px;
+            height: 84px;
         }
         .carousel-int {
             animation: rotateOrdi 12s ease-in-out infinite;
@@ -90,16 +90,16 @@
                 transform: translateY(0);
             }
             25%,45% {
-                transform: translateY(-123px);
+                transform: translateY(-84px);
             }
             50%,70% {
-                transform: translateY(-123px * 2);
+                transform: translateY(-84px * 2);
             }
             75%,95% {
-                transform: translateY(-123px * 3);
+                transform: translateY(-84px * 3);
             }
             100% {
-                transform: translateY(-123px * 4);
+                transform: translateY(-84px * 4);
             }
         }
     }

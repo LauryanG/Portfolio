@@ -80,16 +80,13 @@ body.dark {
 @media (min-width: 768px) {
     body {
         .container {
-
-            
             h1 {
-                font-size: 4.5em;
+                font-size: 3.5em;
             }
 
             .contact-boite,
             .a-propos-boite {
-                background-color: rgba($color: #F0F0F0, $alpha: 0.9);
-                border: 5px solid $lightPurple;
+                background-color: rgba($color: #F0F0F0, $alpha: 0.96);
             }
             .card-body {
                 background-color:  #F0F0F0;
@@ -101,8 +98,7 @@ body.dark {
         .container {
             .contact-boite,
             .a-propos-boite {
-                background-color: rgba($color: #8D8C8C, $alpha: 0.9);
-                border: 5px solid $darkAqua;
+                background-color: rgba($color: #8D8C8C, $alpha: 0.6);
             }
 
             .card-body {
@@ -112,19 +108,24 @@ body.dark {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
     body {
         .container {
 
             
             h1 {
-                font-size: 6em;
+                font-size: 4em;
             }
 
             .contact-boite,
             .a-propos-boite,
             .image-projet {
                 box-shadow: $lightShadow;
+            }
+
+            .contact-boite,
+            .a-propos-boite {
+                border: 5px solid $lightPurple;
             }
 
             .image-projet {
@@ -139,6 +140,11 @@ body.dark {
             .a-propos-boite,
             .image-projet  {
                 box-shadow: $darkShadow;
+            }
+
+            .contact-boite,
+            .a-propos-boite {
+                border: 5px solid $darkAqua;
             }
 
             .image-projet {

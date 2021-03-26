@@ -71,34 +71,36 @@ body.dark .nav {
 
 @media (min-width: 768px) {
   body .container h1 {
-    font-size: 4.5em;
+    font-size: 3.5em;
   }
   body .container .contact-boite,
   body .container .a-propos-boite {
-    background-color: rgba(240, 240, 240, 0.9);
-    border: 5px solid #8B47B5;
+    background-color: rgba(240, 240, 240, 0.96);
   }
   body .container .card-body {
     background-color: #F0F0F0;
   }
   body.dark .container .contact-boite,
   body.dark .container .a-propos-boite {
-    background-color: rgba(141, 140, 140, 0.9);
-    border: 5px solid #00FFFF;
+    background-color: rgba(141, 140, 140, 0.6);
   }
   body.dark .container .card-body {
     background-color: #181818;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   body .container h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
   body .container .contact-boite,
   body .container .a-propos-boite,
   body .container .image-projet {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 3px 8px 2px rgba(0, 0, 0, 0.48);
+  }
+  body .container .contact-boite,
+  body .container .a-propos-boite {
+    border: 5px solid #8B47B5;
   }
   body .container .image-projet {
     border: 3px solid #8B47B5;
@@ -107,6 +109,10 @@ body.dark .nav {
   body.dark .container .a-propos-boite,
   body.dark .container .image-projet {
     box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.25), 0 3px 8px 2px rgba(255, 255, 255, 0.48);
+  }
+  body.dark .container .contact-boite,
+  body.dark .container .a-propos-boite {
+    border: 5px solid #00FFFF;
   }
   body.dark .container .image-projet {
     border: 3px solid #00FFFF;
@@ -255,10 +261,10 @@ nav.ouvert {
 
 @media (min-width: 768px) {
   .accueil p {
-    font-size: 3em;
+    font-size: 3.5em;
   }
   .accueil .carousel-ext {
-    height: 94px;
+    height: 75px;
   }
   .accueil .carousel-int {
     animation: rotateTablette 12s ease-in-out infinite;
@@ -268,26 +274,26 @@ nav.ouvert {
       transform: translateY(0);
     }
     25%, 45% {
-      transform: translateY(-94px);
+      transform: translateY(-75px);
     }
     50%, 70% {
-      transform: translateY(-188px);
+      transform: translateY(-150px);
     }
     75%, 95% {
-      transform: translateY(-282px);
+      transform: translateY(-225px);
     }
     100% {
-      transform: translateY(-376px);
+      transform: translateY(-300px);
     }
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   .accueil p {
     font-size: 4em;
   }
   .accueil .carousel-ext {
-    height: 123px;
+    height: 84px;
   }
   .accueil .carousel-int {
     animation: rotateOrdi 12s ease-in-out infinite;
@@ -297,16 +303,16 @@ nav.ouvert {
       transform: translateY(0);
     }
     25%, 45% {
-      transform: translateY(-123px);
+      transform: translateY(-84px);
     }
     50%, 70% {
-      transform: translateY(-246px);
+      transform: translateY(-168px);
     }
     75%, 95% {
-      transform: translateY(-369px);
+      transform: translateY(-252px);
     }
     100% {
-      transform: translateY(-492px);
+      transform: translateY(-336px);
     }
   }
 }
@@ -393,7 +399,7 @@ nav.ouvert {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   .contact {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(9, 0.5fr);
@@ -472,13 +478,12 @@ nav.ouvert {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   .a-propos {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(9, 0.5fr);
   }
   .a-propos h1 {
-    font-size: 72px !important;
     text-align: right;
     grid-column-start: 8;
     grid-column-end: 12;
@@ -489,9 +494,12 @@ nav.ouvert {
     grid-column-end: 12;
     grid-row-start: 5;
     grid-row-end: 13;
+    max-height: 410px;
   }
   .a-propos .a-propos-boite .a-propos-description {
     font-size: 1.12em;
+    overflow-y: scroll;
+    padding-top: 1em;
   }
   .a-propos .a-propos-img {
     grid-column-start: 2;
@@ -499,6 +507,7 @@ nav.ouvert {
     grid-row-start: 2;
     grid-row-end: 9;
     border-radius: 30px;
+    max-height: 600px;
   }
 }
 
@@ -556,10 +565,6 @@ nav.ouvert {
   display: none;
 }
 
-.projets .listeProjets .image-projet {
-  display: none;
-}
-
 .projets .monCarousel {
   display: none;
 }
@@ -590,7 +595,7 @@ nav.ouvert {
     grid-template-rows: auto;
     grid-template-columns: 100px auto;
     align-items: center;
-    margin: 1.25em 0;
+    margin: 5em 0;
   }
   .projets .listeProjets li .unProjet {
     grid-column-start: 2;
@@ -662,10 +667,19 @@ nav.ouvert {
     justify-content: center;
     background-color: transparent;
   }
+  .projets .modal-content .modal-body .carousel-item {
+    height: 500px;
+  }
+  .projets .modal-content .modal-body .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   .projets .modal-content .modal-body .carousel-control-prev,
   .projets .modal-content .modal-body .carousel-control-next {
     background-color: transparent;
     border: none;
+    color: black;
   }
   /* Hide scrollbar for Chrome, Safari and Opera */
   ::-webkit-scrollbar {
@@ -673,11 +687,14 @@ nav.ouvert {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   .projets {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+  }
+  .projets .bg-image {
+    overflow: visible !important;
   }
   .projets h1 {
     text-align: center;
@@ -716,6 +733,14 @@ nav.ouvert {
   .projets .monCarousel {
     display: block;
     width: 85vw;
+  }
+  .projets .carousel-item {
+    height: 625px;
+  }
+  .projets .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 /*# sourceMappingURL=style.css.map */

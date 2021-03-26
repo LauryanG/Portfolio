@@ -48,10 +48,6 @@
                 display: none;
             }
         }
-
-        .image-projet {
-            display: none;
-        }
     }
 
     .monCarousel {
@@ -87,7 +83,7 @@
                 grid-template-rows: auto;
                 grid-template-columns: 100px auto;
                 align-items: center;
-                margin: 1.25em 0;
+                margin: 5em 0;
 
                 .unProjet {
                     grid-column-start: 2;
@@ -174,10 +170,21 @@
                 justify-content: center;
                 background-color: transparent;
 
+                .carousel-item {
+                    height: 500px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+
+                        object-fit: contain;
+                    }
+                }
+
                 .carousel-control-prev,
                 .carousel-control-next {
                     background-color: transparent;
                     border: none;
+                    color: black;
                 }
             }
         }
@@ -188,8 +195,13 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
     .projets {
+
+        .bg-image {
+            overflow: visible !important;
+        }
+        
         display: flex;
         flex-direction: column;
 
@@ -240,8 +252,18 @@
 
         .monCarousel {
             display: block;
-
             width: 85vw;
+        }
+
+        .carousel-item {
+            height: 625px;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                object-fit: contain;
+            }
         }
     }
     //  /* Hide scrollbar for Chrome, Safari and Opera */

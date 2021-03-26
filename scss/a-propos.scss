@@ -58,13 +58,12 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
     .a-propos {
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(9, 0.5fr);
 
         h1 {
-            font-size: 72px !important;
             text-align: right;
             grid-column-start: 8;
             grid-column-end: 12;
@@ -77,8 +76,12 @@
             grid-row-start: 5;
             grid-row-end: 13;
 
+            max-height: 410px;
+
             .a-propos-description {
                 font-size: 1.12em;
+                overflow-y: scroll;
+                padding-top: 1em;
             }
         }
 
@@ -89,6 +92,8 @@
             grid-row-end: 9;
 
             border-radius: 30px;
+
+            max-height: 600px;
         }
     }
 }

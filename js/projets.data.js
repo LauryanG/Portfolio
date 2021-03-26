@@ -19,7 +19,7 @@ let projets = [
         description: "Dark Planet est un projet d'équipe de jeu vidéo. Il s'agit d'un prototype de jeu 3D d'espionnage futuriste et post apocalyptique qui nous met dans la peau d’un alien qui s’écrase avec son vaisseau sur terre. Le but est simple, aller chercher les pièces manquantes du vaisseau et s'enfuir de la planète. <br> <br> <a href=\"https://getpranked-ori.itch.io/dark-planet \" target=\"_blank\"> Jouer à Dark Planet</a>",
         images: ["media/media-projets/darkPlanet/AlienLigght.jpg", "media/media-projets/darkPlanet/Bunker_1.jpg", "media/media-projets/darkPlanet/cultisteCouple.jpg"],
         video: true,
-        videos: ["https://www.youtube.com/watch?v=9DfjePIRikU"]
+        videos: ["https://www.youtube.com/embed/9DfjePIRikU"]
 
     },
     {
@@ -46,7 +46,7 @@ let projets = [
     {
         titre: "Les mots",
         description: "Création du design et programmation d'un jeu avec la librairie Phaser. Il s'agit d'un jeu éducatif dont le but est de trouver le plus de mot possible avec les lettres données en moins de 60 secondes.",
-        images: ["media/media-projets/les mots/accueil.PNG","media/media-projets/les mots/jouer.PNG", "media/media-projets/les mots/jeu.PNG"],
+        images: ["media/media-projets/lesmots/accueil.PNG","media/media-projets/lesmots/jouer.PNG", "media/media-projets/lesmots/jeu.PNG"],
         video: false,
         videos: [""]
     },
@@ -60,7 +60,7 @@ let projets = [
     {
         titre: "Mustache Man",
         description: "Création d'un jeu vidéo en 2D. Il s'agit d'un jeu de plateforme ou le joueur a pour but d'accumuler le plus de point en amassant des pièces sans mourir. Plus le joueur à des points, plus le jeu devient difficile.",
-        images: ["media/media-projets/mustache man/Gervais_Affiche_TP2B.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_HUD.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_Instruction.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_Intro.png", "media/media-projets/mustache man/Gervais_Splash_screen_TP2B_Perdu.png"],
+        images: ["media/media-projets/mustacheman/Gervais_Affiche_TP2B.png", "media/media-projets/mustacheman/Gervais_Splash_screen_TP2B_HUD.png", "media/media-projets/mustacheman/Gervais_Splash_screen_TP2B_Instruction.png", "media/media-projets/mustacheman/Gervais_Splash_screen_TP2B_Intro.png", "media/media-projets/mustacheman/Gervais_Splash_screen_TP2B_Perdu.png"],
         video: false,
         videos: [""]
     },
