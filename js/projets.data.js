@@ -46,7 +46,7 @@ let projets = [
     {
         titre: "Les mots",
         description: "Création du design et programmation d'un jeu avec la librairie Phaser. Il s'agit d'un jeu éducatif dont le but est de trouver le plus de mot possible avec les lettres données en moins de 60 secondes.",
-        images: ["media/media-projets/lesmots/accueil.PNG","media/media-projets/lesmots/jouer.PNG", "media/media-projets/lesmots/jeu.PNG"],
+        images: ["media/media-projets/lesmots/accueil.PNG","media/media-projets/lesmots/jouer.PNG", "media/media-projets/lesmots/jeu.png"],
         video: false,
         videos: [""]
     },
